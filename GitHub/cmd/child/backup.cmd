@@ -1,3 +1,4 @@
+
 @echo off
 setlocal enabledelayedexpansion
 
@@ -27,6 +28,13 @@ FOR /f "usebackq delims=" %%a IN (%REPOSITORIES_LIST_FILE%) DO (
     call child\backup_repository !GitHubUserUrl! %%a
   )
 )
+
+set OPTIONS=a -ac -ag -cfg- -dh -ep2 -hp%PASSWORD% -m5 -mdg -r0 -rr10%% -s -idp -df -ep
+set OUT_DIRECTORY=%BACKUP_DIRECTORY%
+set LOG_FILE=%TEMP%\GitHubBackup.log
+del %LOG_FILE%
+
+bin\rar.exe %OPTIONS% %OUT_DIRECTORY%\backup.rar *.bundle > %LOG_FILE%
 
 endlocal
 pause
