@@ -8,5 +8,5 @@
 
 Запуск скрипта:
 ```
-child\backup.cmd path\To\RepositoriesDirectory Path\To\ResultDirectory Password
+child\backup.cmd Path\To\RepositoriesDirectory Path\To\ResultDirectory Password
 ```
