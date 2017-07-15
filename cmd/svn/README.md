@@ -8,5 +8,5 @@
 
 Запуск скрипта:
 ```
-child\backup.cmd D:\Repositories D:\DropBox password
+backup.cmd D:\Repositories D:\DropBox\Backup password
 ```
