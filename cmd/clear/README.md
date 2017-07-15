@@ -5,5 +5,5 @@
 
 Запуск скрипта:
 ```
-child\clear.cmd D:\Path\To\ClearDirectory 180
+clear.cmd D:\DropBox\Backup 180
 ```

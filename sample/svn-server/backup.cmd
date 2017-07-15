@@ -2,4 +2,4 @@
 
 set PATH=%PATH%;C:\Program Files\VisualSVN Server\bin
 
-child\backup.cmd D:\Repositories D:\Result password
+svn\backup.cmd D:\Repositories "D:\Cloud.backup\SVN Backup" password
