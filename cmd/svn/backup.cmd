@@ -29,8 +29,8 @@ for /d %%I in ("%PathToRepositories%\*") do (
     echo Missing !RepositoryName!...
   ) else (
     echo Copy !RepositoryName!... 
-    md %PathToCopyRepositories%\!RepositoryName!
-    svnadmin hotcopy %PathToRepositories%\!RepositoryName! %PathToCopyRepositories%\!RepositoryName!
+    md "%PathToCopyRepositories%\!RepositoryName!"
+    svnadmin hotcopy "%PathToRepositories%\!RepositoryName!" "%PathToCopyRepositories%\!RepositoryName!"
   )  
 )
 
@@ -38,11 +38,11 @@ rem ===== Настройки архиватора =====
 
 set a_opt=-t7z -r -p%Password% -mhe
 set a_not=-scsWIN -x@exclude.txt
-set a_out="%PathToResult%\backup%DateTime%.7z"
+set a_out=%PathToResult%\backup%DateTime%.7z
 
 rem ===== Запуск архиватора =====
 
 echo Archived...
-bin\7z.exe a %a_opt% %a_not% %a_out% %PathToCopyRepositories%\*
+bin\7z.exe a %a_opt% %a_not% "%a_out%" "%PathToCopyRepositories%\*"
 
-rd %PathToBackupDirectory% /S /Q
+rd "%PathToBackupDirectory%" /S /Q
