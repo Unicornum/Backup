@@ -14,7 +14,9 @@ set PathToResult=%~2
 set Password=%3
 set PathToBackupDirectory=%TEMP%\BackupSvn
 set PathToCopyRepositories=%PathToBackupDirectory%\CopyRepositories
-set DateTime=%DATE:~-4%%DATE:~3,2%%DATE:~0,2%%TIME:~0,2%%TIME:~3,2%%TIME:~6,2%
+set Time2Hour=%TIME: =0%
+set DateTime=%DATE:~-4%%DATE:~3,2%%DATE:~0,2%%Time2Hour:~0,2%%Time2Hour:~3,2%%Time2Hour:~6,2%
+
 
 rem ===== Копируем репозитории =====
 
