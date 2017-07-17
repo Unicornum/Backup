@@ -9,8 +9,8 @@ rem backup.cmd PathToRepositories PathToResultDirectory Password
 rem
 rem ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-set PathToRepositories=%1
-set PathToResult=%2
+set PathToRepositories=%~1
+set PathToResult=%~2
 set Password=%3
 set PathToBackupDirectory=%TEMP%\BackupSvn
 set PathToCopyRepositories=%PathToBackupDirectory%\CopyRepositories
