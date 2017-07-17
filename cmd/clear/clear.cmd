@@ -9,7 +9,7 @@ rem clear PathToClearDirectory FilesCount
 rem
 rem ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-set sFolder=%1
+set sFolder=%~1
 set /a iCount=%2
 
 for /f "skip=%iCount% usebackq delims=" %%i in (

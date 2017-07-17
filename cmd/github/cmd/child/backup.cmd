@@ -14,7 +14,7 @@ rem ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 set REPOSITORIES_LIST_FILE="%1"
 set PASSWORD=%2
-set BACKUP_DIRECTORY="%3"
+set BACKUP_DIRECTORY="%~3"
 
 set /a NumberLine=0
 set GitHubUserUrl=
