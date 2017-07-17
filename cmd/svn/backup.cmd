@@ -14,6 +14,7 @@ set PathToResult=%2
 set Password=%3
 set PathToBackupDirectory=%TEMP%\BackupSvn
 set PathToCopyRepositories=%PathToBackupDirectory%\CopyRepositories
+set DateTime=%DATE:~-4%%DATE:~3,2%%DATE:~0,2%%TIME:~0,2%%TIME:~3,2%%TIME:~6,2%
 
 rem ===== Копируем репозитории =====
 
@@ -35,14 +36,13 @@ for /d %%I in ("%PathToRepositories%\*") do (
 
 rem ===== Настройки архиватора =====
 
-set a_opt=a -ac -ag -cfg- -dh -ep2 -hp%Password% -m5 -mdg -r0 -rr10%% -s -idp
-set a_not=-x@.\exclude.txt
-set a_out="%PathToResult%\backup.rar"
-set a_log=%PathToBackupDirectory%\backup_log.txt
+set a_opt=-t7z -r -p%Password% -mhe
+set a_not=-scsWIN -x@exclude.txt
+set a_out="%PathToResult%\backup%DateTime%.7z"
 
 rem ===== Запуск архиватора =====
 
 echo Archived...
-bin\rar.exe %a_opt% %a_not% %a_out% %PathToCopyRepositories%\* > %a_log%
+bin\7z.exe a %a_opt% %a_not% %a_out% %PathToCopyRepositories%\*
 
 rd %PathToBackupDirectory% /S /Q
