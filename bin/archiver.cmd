@@ -20,4 +20,4 @@ set Exclude=-scsWIN -x@exclude.txt
 set PathToResultFile=%PathToResultDirectory%\backup%DateTime%.7z
 
 echo Archived...
-bin\7z.exe a %Options% %Exclude% "%PathToResultFile%" "%PathToSourceFiles%"
+bin\7za.exe a %Options% %Exclude% "%PathToResultFile%" "%PathToSourceFiles%"
