@@ -2,7 +2,7 @@
 
 set PATH=%PATH%;C:\Program Files\VisualSVN Server\bin
 
-svn checkout https://github.com/Unicornum/Backup.git/trunk/sample/svn-server .
+svn checkout https://github.com/Unicornum/Backup.git/trunk/samples/svn-server .
 svn update
 
 echo bin https://github.com/Unicornum/Backup.git/trunk/bin > externals.txt
