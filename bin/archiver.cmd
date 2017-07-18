@@ -1,9 +1,11 @@
 @echo off
 
 rem ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rem
 rem Using:
 rem 
 rem archiver Path\To\Source\*.txt Path\To\Result\Directory Password
+rem
 rem ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 set PathToSourceFiles=%~1

@@ -11,4 +11,4 @@
 bin\archiver.cmd Path\To\Source\*.txt Path\To\Result\Directory Password
 ```
 
-Результатом раюоты скрипта будет файл, имя которого будет содержать дату/время создания файла в формате backupYYYYMMDDhhmmss.7z.
+Результатом работы скрипта будет файл, имя которого будет содержать дату/время создания файла в формате backupYYYYMMDDhhmmss.7z.
