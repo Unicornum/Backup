@@ -1,5 +1,5 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal enableextensions enabledelayedexpansion
 
 rem ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rem
@@ -13,14 +13,14 @@ rem backup .\Repositories.txt E:\DropBox\backup MySuperMegaPassword
 rem
 rem ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-set REPOSITORIES_LIST_FILE="%1"
-set BACKUP_DIRECTORY="%~2"
+set REPOSITORIES_LIST_FILE=%~1
+set BACKUP_DIRECTORY=%~2
 set PASSWORD=%3
 
 set /a NumberLine=0
 set GitHubUserUrl=
 
-FOR /f "usebackq delims=" %%a IN (%REPOSITORIES_LIST_FILE%) DO (
+FOR /f "usebackq delims=" %%a IN ("%REPOSITORIES_LIST_FILE%") DO (
   set /a NumberLine+=1
   rem echo !NumberLine!:%%a
   if !NumberLine! EQU 1 (
@@ -30,6 +30,8 @@ FOR /f "usebackq delims=" %%a IN (%REPOSITORIES_LIST_FILE%) DO (
   )
 )
 
-bin\archiver.cmd "%CD%\*.bundle" "%BACKUP_DIRECTORY%" %PASSWORD%
+call bin\archiver.cmd "%CD%\*.bundle" "%BACKUP_DIRECTORY%" %PASSWORD%
+
+del "%CD%\*.bundle" /S /Q
 
 endlocal

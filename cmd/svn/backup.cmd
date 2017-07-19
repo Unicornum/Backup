@@ -35,7 +35,6 @@ for /d %%I in ("%PathToRepositories%\*") do (
 
 rem ===== Запуск архиватора =====
 
-echo Archived...
-bin\archiver.cmd "%PathToCopyRepositories%\*" "%PathToResult%" %Password%
+call bin\archiver.cmd "%PathToCopyRepositories%\*" "%PathToResult%" %Password%
 
 rd "%PathToBackupDirectory%" /S /Q
