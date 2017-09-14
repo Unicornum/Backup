@@ -1,8 +1,6 @@
 *\.svn\*
-*\Temp\*
-*\html\*
-*\Result\*
+*\lib\*
 *\Debug\*
 *\Release\*
-*\Externals\*
-*\lib\*
+*\Externals\*\*
+*\html\*
