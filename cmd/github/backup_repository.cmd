@@ -16,7 +16,7 @@ set BACKUP_FILE_NAME=%2.bundle
 
 echo =====================================================
 echo Source data:
-echo URL_SOURCE: %URL_SOURCE%
+echo REPOSITORY: %2
 echo LOCAL_COPY: %LOCAL_COPY%
 echo BACKUP_FILE_NAME: %BACKUP_FILE_NAME%
 echo.
