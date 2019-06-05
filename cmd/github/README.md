@@ -23,7 +23,7 @@
 
 ```
 
-set URL_SOURCE=https://github.com/<user>/<source>.git
+set URL_SOURCE=https://<user>:<password>@github.com/<user>/<repository>.git
 
 ```
 
