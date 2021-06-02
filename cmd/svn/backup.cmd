@@ -29,6 +29,7 @@ for /d %%I in ("%PathToRepositories%\*") do (
   ) else (
     echo Copy !RepositoryName!... 
     md "%PathToCopyRepositories%\!RepositoryName!"
+    svnadmin verify "%PathToRepositories%\!RepositoryName!"
     svnadmin hotcopy "%PathToRepositories%\!RepositoryName!" "%PathToCopyRepositories%\!RepositoryName!"
   )  
 )
